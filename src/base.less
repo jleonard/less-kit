@@ -1,0 +1,67 @@
+// mixins
+//------------------------------------
+@import "mixins/grid.less";
+
+// ui foundation
+//------------------------------------
+@import "vars/_colors.less";
+@import "vars/_variables.less";
+@import "fonts.less";
+
+
+// 3rd party libs
+//------------------------------------
+
+// cross browser css reset
+//------------------------------------
+@import "normalize.less";
+
+// scaffolding
+//------------------------------------
+
+*,
+*:before,
+*:after {
+  #css3 > .box-sizing(border-box);
+}
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  font-family: @sans;
+  font-size: @body-font-size;
+}
+
+// conveniences
+//------------------------------------
+.horizontal-box-item(@margin){
+  float: left;
+  margin-left: @margin / 2;
+  margin-right: @margin / 2;
+  &:first-child{
+    margin-left: 0;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.centered{ margin: 0 auto; }
+.text-center{ text-align: center; }
+.horizontal-box{ 
+  #util > .clearfix();
+  > *{
+    .horizontal-box-item(10px);
+  }
+}
+
+// the core html ui elements
+//------------------------------------
+@import "elements.less";
+
+// ui components
+//------------------------------------
+
+// styles to pages or templates
+//------------------------------------
