@@ -1,0 +1,12 @@
+{
+  "name": "less-kit",
+  "version": "0.0.0",
+  "main": "/",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "brainless": "~2.2.0"
+  }
+}

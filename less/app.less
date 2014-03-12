@@ -1,0 +1,60 @@
+// variables
+//------------------------------------
+@import 'vars/variables.less';
+@import 'vars/colors.less';
+
+// @font-face & @keyframes
+//------------------------------------
+@import "includes/font-face.less";
+@import "includes/keyframes.less";
+
+// 3rd party import: brainless
+//------------------------------------
+@pathToBrainless : "../libs/brainless/less/";
+@import "@{pathToBrainless}mixins/animation.less";
+@import "@{pathToBrainless}mixins/css3.less";
+@import "@{pathToBrainless}mixins/filter.less";
+@import "@{pathToBrainless}mixins/flex.less";
+@import "@{pathToBrainless}mixins/grid.less";
+@import "@{pathToBrainless}mixins/position.less";
+@import "@{pathToBrainless}mixins/reset.less";
+@import "@{pathToBrainless}mixins/transform.less";
+@import "@{pathToBrainless}mixins/type.less";
+@import "@{pathToBrainless}mixins/util.less";
+
+// css reset
+//------------------------------------
+@import "includes/normalize.less";
+
+// project mixins
+//------------------------------------
+@import "includes/mixins.less";
+
+// scaffolding: general
+//------------------------------------
+*,
+*:before,
+*:after {
+  #css3 > .box-sizing(border-box);
+}
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+	font-family: @sans;
+  font-size: @bodyFontSize;
+}
+
+// convenience classes
+//------------------------------------
+.hbox{
+  > *{
+    #util > .horizontal-box-item(10px);
+  }
+}
+
+// the basic html elements
+//------------------------------------
+@import "includes/elements.less";
